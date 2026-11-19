@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skylark-lora"
+version = "0.1.0"
+description = "LoRA fine-tuning of a small open LLM for tool calling in the Skylark airline agent"
+authors = [{ name = "Robel Berhe" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2",        # typed tool definitions + validation (Step 1)
+  "python-dotenv>=1",   # loads secrets from .env
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",          # automatic tests
+  "ruff>=0.6",          # code formatter + linter
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

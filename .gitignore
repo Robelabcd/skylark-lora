@@ -1,0 +1,25 @@
+# Secrets: never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Large or generated files
+data/*
+# ...except the hand-written test set, which IS committed
+!data/eval/
+checkpoints/
+outputs/
+*.safetensors
+*.bin
+*.pt
+
+# Editors / OS
+.DS_Store
+.vscode/
+.ipynb_checkpoints/
