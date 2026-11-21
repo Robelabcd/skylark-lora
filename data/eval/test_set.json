@@ -6,7 +6,7 @@
     "messages": [
       {
         "role": "user",
-        "content": "I need a flight from Boston to Denver on December 15"
+        "content": "I'm visiting a friend in Denver on December 15. Could you look for flights out of Boston?"
       }
     ],
     "expected": {
@@ -19,13 +19,284 @@
     }
   },
   {
+    "id": "simple_search-002",
+    "category": "simple_search",
+    "today": "2026-12-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I have to be in Phoenix January 9. What can I fly on from Atlanta?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ATL",
+        "destination": "PHX",
+        "departure_date": "2027-01-09"
+      }
+    },
+    "notes": "January has not come yet in December, so it is 2027."
+  },
+  {
+    "id": "simple_search-003",
+    "category": "simple_search",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Any flights Seattle to Denver for Dec 12? I'm sorting out a short trip."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "SEA",
+        "destination": "DEN",
+        "departure_date": "2026-12-12"
+      }
+    }
+  },
+  {
+    "id": "simple_search-004",
+    "category": "simple_search",
+    "today": "2027-01-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Valentine's Day in Boston sounds nice. Can you check flights leaving Nashville February 14?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BNA",
+        "destination": "BOS",
+        "departure_date": "2027-02-14"
+      }
+    }
+  },
+  {
+    "id": "simple_search-005",
+    "category": "simple_search",
+    "today": "2027-02-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could you pull up one-way tickets from San Diego to Salt Lake City for March 3?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "SAN",
+        "destination": "SLC",
+        "departure_date": "2027-03-03"
+      }
+    }
+  },
+  {
+    "id": "simple_search-006",
+    "category": "simple_search",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Got anything Philly to Orlando on 12/28?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "PHL",
+        "destination": "MCO",
+        "departure_date": "2026-12-28"
+      }
+    },
+    "notes": "US date format: 12/28 is December 28."
+  },
+  {
+    "id": "simple_search-007",
+    "category": "simple_search",
+    "today": "2027-01-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Planning Vegas with friends. I'd leave Minneapolis on January 22; what flights are there?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "MSP",
+        "destination": "LAS",
+        "departure_date": "2027-01-22"
+      }
+    }
+  },
+  {
+    "id": "simple_search-008",
+    "category": "simple_search",
+    "today": "2026-12-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Need to get to Charlotte from Detroit on Dec 9. Can you find a flight?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DTW",
+        "destination": "CLT",
+        "departure_date": "2026-12-09"
+      }
+    }
+  },
+  {
+    "id": "simple_search-009",
+    "category": "simple_search",
+    "today": "2027-03-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you find flights out of Austin headed to New Orleans April 2?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "AUS",
+        "destination": "MSY",
+        "departure_date": "2027-04-02"
+      }
+    },
+    "notes": "New Orleans is MSY."
+  },
+  {
+    "id": "simple_search-010",
+    "category": "simple_search",
+    "today": "2026-12-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to spend some time in Hawaii. Show me Denver to Honolulu flights for Jan 15."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DEN",
+        "destination": "HNL",
+        "departure_date": "2027-01-15"
+      }
+    }
+  },
+  {
+    "id": "simple_search-011",
+    "category": "simple_search",
+    "today": "2027-01-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'll be in Madrid and need to reach Lisbon February 6. Could you search airfare?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "MAD",
+        "destination": "LIS",
+        "departure_date": "2027-02-06"
+      }
+    }
+  },
+  {
+    "id": "simple_search-012",
+    "category": "simple_search",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "miami to cancun dec 27, what flights can i take?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "MIA",
+        "destination": "CUN",
+        "departure_date": "2026-12-27"
+      }
+    }
+  },
+  {
+    "id": "simple_search-013",
+    "category": "simple_search",
+    "today": "2026-12-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'm hoping to travel to Addis Ababa on January 18, flying out of Dulles. Any options?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "IAD",
+        "destination": "ADD",
+        "departure_date": "2027-01-18"
+      }
+    },
+    "notes": "Dulles is named, so IAD, not the WAS metro code."
+  },
+  {
+    "id": "simple_search-014",
+    "category": "simple_search",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Need to leave Charlotte for Pittsburgh on Monday, December 14. What's available?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "CLT",
+        "destination": "PIT",
+        "departure_date": "2026-12-14"
+      }
+    },
+    "notes": "December 14, 2026 is a Monday, so the weekday agrees."
+  },
+  {
+    "id": "simple_search-015",
+    "category": "simple_search",
+    "today": "2027-02-25",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you pull up flights for Amsterdam to Dublin, March 19?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "AMS",
+        "destination": "DUB",
+        "departure_date": "2027-03-19"
+      }
+    }
+  },
+  {
     "id": "search_options-001",
     "category": "search_options",
     "today": "2026-12-01",
     "messages": [
       {
         "role": "user",
-        "content": "Round trip JFK to LAX for 2 adults, leaving Dec 18 and coming back Jan 3. Nonstop, business class."
+        "content": "My partner and I need to go JFK to LAX Dec 18, come home Jan 3. Business class, and please only show nonstop flights."
       }
     ],
     "expected": {
@@ -43,13 +314,249 @@
     "notes": "Jan 3 is after today's date in December, so it means 2027."
   },
   {
+    "id": "search_options-002",
+    "category": "search_options",
+    "today": "2026-12-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "We're two adults heading from Newark to Miami on Dec 19 and flying back on the 27th. Can you check premium economy?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "EWR",
+        "destination": "MIA",
+        "departure_date": "2026-12-19",
+        "return_date": "2026-12-27",
+        "adults": 2,
+        "cabin": "premium"
+      }
+    },
+    "notes": "Newark is EWR, not the NYC metro code, because the airport is named."
+  },
+  {
+    "id": "search_options-003",
+    "category": "search_options",
+    "today": "2026-12-15",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I really don't want a layover. Can you find a nonstop from Boston to San Francisco for just me on Jan 10?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BOS",
+        "destination": "SFO",
+        "departure_date": "2027-01-10",
+        "max_stops": 0
+      }
+    }
+  },
+  {
+    "id": "search_options-004",
+    "category": "search_options",
+    "today": "2027-01-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work trip: Atlanta to Seattle Feb 3, returning Feb 8. I need business class both ways."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ATL",
+        "destination": "SEA",
+        "departure_date": "2027-02-03",
+        "return_date": "2027-02-08",
+        "cabin": "business"
+      }
+    }
+  },
+  {
+    "id": "search_options-005",
+    "category": "search_options",
+    "today": "2027-02-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "It's four of us, all adults. Can you search economy seats from Phoenix to Orlando for March 20?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "PHX",
+        "destination": "MCO",
+        "departure_date": "2027-03-20",
+        "adults": 4
+      }
+    },
+    "notes": "Economy is the default, so cabin can be omitted or set to economy."
+  },
+  {
+    "id": "search_options-006",
+    "category": "search_options",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you find three seats O'Hare to Denver December 21? One connection is okay, but no more."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ORD",
+        "destination": "DEN",
+        "departure_date": "2026-12-21",
+        "adults": 3,
+        "max_stops": 1
+      }
+    }
+  },
+  {
+    "id": "search_options-007",
+    "category": "search_options",
+    "today": "2026-12-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Two of us want to fly nonstop in business from Dulles to Frankfurt on January 25, back February 2."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "IAD",
+        "destination": "FRA",
+        "departure_date": "2027-01-25",
+        "return_date": "2027-02-02",
+        "adults": 2,
+        "cabin": "business",
+        "max_stops": 0
+      }
+    }
+  },
+  {
+    "id": "search_options-008",
+    "category": "search_options",
+    "today": "2026-12-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Going to Honolulu from LAX Dec 26, coming back Jan 2. I'd prefer premium economy."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "LAX",
+        "destination": "HNL",
+        "departure_date": "2026-12-26",
+        "return_date": "2027-01-02",
+        "cabin": "premium"
+      }
+    },
+    "notes": "The return in January is in 2027."
+  },
+  {
+    "id": "search_options-009",
+    "category": "search_options",
+    "today": "2027-02-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could you check one-way flights from Salt Lake City to Minneapolis for two adults on Feb 19? Nonstop please."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "SLC",
+        "destination": "MSP",
+        "departure_date": "2027-02-19",
+        "adults": 2,
+        "max_stops": 0
+      }
+    }
+  },
+  {
+    "id": "search_options-010",
+    "category": "search_options",
+    "today": "2027-02-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Five grown-ups heading Nashville to Vegas March 4 and back March 8. What round-trip flights do you have?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BNA",
+        "destination": "LAS",
+        "departure_date": "2027-03-04",
+        "return_date": "2027-03-08",
+        "adults": 5
+      }
+    }
+  },
+  {
+    "id": "search_options-011",
+    "category": "search_options",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I need business class from JFK into Heathrow, leaving December 18 and returning January 3."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "JFK",
+        "destination": "LHR",
+        "departure_date": "2026-12-18",
+        "return_date": "2027-01-03",
+        "cabin": "business"
+      }
+    }
+  },
+  {
+    "id": "search_options-012",
+    "category": "search_options",
+    "today": "2027-03-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Trying to get Boston to Reykjavik April 10 and back April 17. Economy is fine as long as it's at most one stop."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BOS",
+        "destination": "KEF",
+        "departure_date": "2027-04-10",
+        "return_date": "2027-04-17",
+        "max_stops": 1
+      }
+    },
+    "notes": "Reykjavik's international airport is KEF."
+  },
+  {
     "id": "relative_date-001",
     "category": "relative_date",
     "today": "2026-12-01",
     "messages": [
       {
         "role": "user",
-        "content": "anything from dulles to seattle this friday?"
+        "content": "i've gotta go from dulles to seattle this friday. can you check flights?"
       }
     ],
     "expected": {
@@ -63,13 +570,193 @@
     "notes": "Today is Tuesday 2026-12-01, so this Friday is 2026-12-04."
   },
   {
+    "id": "relative_date-002",
+    "category": "relative_date",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you get me options Denver to Phoenix for tomorrow?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DEN",
+        "destination": "PHX",
+        "departure_date": "2026-12-02"
+      }
+    },
+    "notes": "Today is Tuesday Dec 1, so tomorrow is Dec 2."
+  },
+  {
+    "id": "relative_date-003",
+    "category": "relative_date",
+    "today": "2026-12-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Heading to Miami from Boston this Saturday. What are my flight choices?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BOS",
+        "destination": "MIA",
+        "departure_date": "2026-12-05"
+      }
+    },
+    "notes": "Today is Thursday Dec 3, so this Saturday is Dec 5."
+  },
+  {
+    "id": "relative_date-004",
+    "category": "relative_date",
+    "today": "2026-12-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What could I fly Seattle to Las Vegas on the 20th?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "SEA",
+        "destination": "LAS",
+        "departure_date": "2026-12-20"
+      }
+    },
+    "notes": "The 20th of the current month."
+  },
+  {
+    "id": "relative_date-005",
+    "category": "relative_date",
+    "today": "2026-12-15",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I need to go Atlanta to Orlando Jan 5. Can you look that up?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ATL",
+        "destination": "MCO",
+        "departure_date": "2027-01-05"
+      }
+    },
+    "notes": "January 5 has passed this year, so it means 2027."
+  },
+  {
+    "id": "relative_date-006",
+    "category": "relative_date",
+    "today": "2027-01-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'm leaving from O'Hare to Denver the day after tomorrow. Any tickets?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ORD",
+        "destination": "DEN",
+        "departure_date": "2027-01-16"
+      }
+    },
+    "notes": "Today is Thursday Jan 14, so the day after tomorrow is Jan 16."
+  },
+  {
+    "id": "relative_date-007",
+    "category": "relative_date",
+    "today": "2027-02-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Something came up and I have to fly Philadelphia to Charlotte today. Can you search?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "PHL",
+        "destination": "CLT",
+        "departure_date": "2027-02-05"
+      }
+    }
+  },
+  {
+    "id": "relative_date-008",
+    "category": "relative_date",
+    "today": "2027-02-25",
+    "messages": [
+      {
+        "role": "user",
+        "content": "austin to nashville on the 3rd, got anything?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "AUS",
+        "destination": "BNA",
+        "departure_date": "2027-03-03"
+      }
+    },
+    "notes": "Today is Feb 25, so the 3rd has passed this month and means March 3."
+  },
+  {
+    "id": "relative_date-009",
+    "category": "relative_date",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you find me a Dulles–Boston round trip? Fly out this Friday, return Sunday."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "IAD",
+        "destination": "BOS",
+        "departure_date": "2026-12-04",
+        "return_date": "2026-12-06"
+      }
+    },
+    "notes": "Today is Tuesday Dec 1: Friday is Dec 4, the following Sunday is Dec 6."
+  },
+  {
+    "id": "relative_date-010",
+    "category": "relative_date",
+    "today": "2027-03-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'll need to go from Detroit to Minneapolis exactly a week from today. What flights are there?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DTW",
+        "destination": "MSP",
+        "departure_date": "2027-03-17"
+      }
+    },
+    "notes": "Today is Wednesday Mar 10, so one week later is Mar 17."
+  },
+  {
     "id": "city_airport-001",
     "category": "city_airport",
     "today": "2026-12-01",
     "messages": [
       {
         "role": "user",
-        "content": "Fly me from DC to Chicago on the 12th"
+        "content": "I'm going DC to Chicago on the 12th. I can use whichever airport works."
       }
     ],
     "expected": {
@@ -81,6 +768,145 @@
       }
     },
     "notes": "Multi-airport cities use metro codes: WAS (IAD, DCA, BWI), CHI (ORD, MDW)."
+  },
+  {
+    "id": "city_airport-002",
+    "category": "city_airport",
+    "today": "2026-12-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'll take any NYC airport to any Chicago airport for January 12. Can you search?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "NYC",
+        "destination": "CHI",
+        "departure_date": "2027-01-12"
+      }
+    },
+    "notes": "Both cities have several airports and none is named, so metro codes."
+  },
+  {
+    "id": "city_airport-003",
+    "category": "city_airport",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flying out of Reagan National for Boston Dec 16. Can you find options?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DCA",
+        "destination": "BOS",
+        "departure_date": "2026-12-16"
+      }
+    },
+    "notes": "Reagan National is DCA."
+  },
+  {
+    "id": "city_airport-004",
+    "category": "city_airport",
+    "today": "2027-01-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you look up a ticket from LaGuardia to Atlanta on Feb 2?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "LGA",
+        "destination": "ATL",
+        "departure_date": "2027-02-02"
+      }
+    }
+  },
+  {
+    "id": "city_airport-005",
+    "category": "city_airport",
+    "today": "2027-02-25",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A flight from London to Paris on March 14, please. I'm flexible about airports."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "LON",
+        "destination": "PAR",
+        "departure_date": "2027-03-14"
+      }
+    },
+    "notes": "Metro codes for London and Paris."
+  },
+  {
+    "id": "city_airport-006",
+    "category": "city_airport",
+    "today": "2026-12-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I live closer to Midway. Could you check a flight from there to Nashville on January 9?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "MDW",
+        "destination": "BNA",
+        "departure_date": "2027-01-09"
+      }
+    },
+    "notes": "Midway is Chicago's second airport, MDW."
+  },
+  {
+    "id": "city_airport-007",
+    "category": "city_airport",
+    "today": "2027-03-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Want to fly Baltimore to Tokyo, specifically Haneda, April 1. What can you find?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BWI",
+        "destination": "HND",
+        "departure_date": "2027-04-01"
+      }
+    },
+    "notes": "Baltimore is BWI; Haneda is named, so HND, not TYO."
+  },
+  {
+    "id": "city_airport-008",
+    "category": "city_airport",
+    "today": "2026-12-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Any flights from the DC area into London Heathrow on December 30?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "WAS",
+        "destination": "LHR",
+        "departure_date": "2026-12-30"
+      }
+    },
+    "notes": "DC has no airport named, so WAS; Heathrow is named, so LHR."
   },
   {
     "id": "follow_up-001",
@@ -140,7 +966,7 @@
       },
       {
         "role": "user",
-        "content": "Is the cheapest one a good deal or should I wait?"
+        "content": "The United one is cheapest, right? Should I lock in that price or hold off?"
       }
     ],
     "expected": {
@@ -152,13 +978,1024 @@
     "notes": "The cheapest offer is United at $248 (OF-1022)."
   },
   {
+    "id": "follow_up-002",
+    "category": "follow_up",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Wait, the Alaska option — can I see what’s included before deciding?"
+      }
+    ],
+    "expected": {
+      "name": "get_offer_details",
+      "arguments": {
+        "offer_id": "OF-1021"
+      }
+    }
+  },
+  {
+    "id": "follow_up-003",
+    "category": "follow_up",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "I think I'll take Delta. Can you start the booking with the flexible fare?"
+      }
+    ],
+    "expected": {
+      "name": "prepare_booking",
+      "arguments": {
+        "offer_id": "OF-1023",
+        "fare": "flex"
+      }
+    }
+  },
+  {
+    "id": "follow_up-004",
+    "category": "follow_up",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "I don't mind paying a bit more for nonstop. Could you keep an eye on the Alaska fare and flag it if it hits $280?"
+      }
+    ],
+    "expected": {
+      "name": "create_price_watch",
+      "arguments": {
+        "offer_id": "OF-1021",
+        "target_price": 280
+      }
+    },
+    "notes": "Alaska is the only nonstop."
+  },
+  {
+    "id": "follow_up-005",
+    "category": "follow_up",
+    "today": "2027-01-02",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip Boston to Miami, January 15 to January 20"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "BOS",
+            "destination": "MIA",
+            "departure_date": "2027-01-15",
+            "return_date": "2027-01-20"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-2031",
+              "airline": "JetBlue",
+              "depart": "2027-01-15T08:30",
+              "arrive": "2027-01-15T12:05",
+              "stops": 0,
+              "price_usd": 389
+            },
+            {
+              "offer_id": "OF-2032",
+              "airline": "American",
+              "depart": "2027-01-15T13:15",
+              "arrive": "2027-01-15T16:55",
+              "stops": 0,
+              "price_usd": 412
+            },
+            {
+              "offer_id": "OF-2033",
+              "airline": "Spirit",
+              "depart": "2027-01-15T06:00",
+              "arrive": "2027-01-15T12:40",
+              "stops": 1,
+              "via": "FLL",
+              "price_usd": 221
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: JetBlue nonstop for $389, American nonstop for $412, and Spirit with 1 stop for $221."
+      },
+      {
+        "role": "user",
+        "content": "$389 for JetBlue feels a little steep. Would you buy it now or hold off?"
+      }
+    ],
+    "expected": {
+      "name": "get_price_advice",
+      "arguments": {
+        "offer_id": "OF-2031"
+      }
+    }
+  },
+  {
+    "id": "follow_up-006",
+    "category": "follow_up",
+    "today": "2027-01-02",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip Boston to Miami, January 15 to January 20"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "BOS",
+            "destination": "MIA",
+            "departure_date": "2027-01-15",
+            "return_date": "2027-01-20"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-2031",
+              "airline": "JetBlue",
+              "depart": "2027-01-15T08:30",
+              "arrive": "2027-01-15T12:05",
+              "stops": 0,
+              "price_usd": 389
+            },
+            {
+              "offer_id": "OF-2032",
+              "airline": "American",
+              "depart": "2027-01-15T13:15",
+              "arrive": "2027-01-15T16:55",
+              "stops": 0,
+              "price_usd": 412
+            },
+            {
+              "offer_id": "OF-2033",
+              "airline": "Spirit",
+              "depart": "2027-01-15T06:00",
+              "arrive": "2027-01-15T12:40",
+              "stops": 1,
+              "via": "FLL",
+              "price_usd": 221
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: JetBlue nonstop for $389, American nonstop for $412, and Spirit with 1 stop for $221."
+      },
+      {
+        "role": "user",
+        "content": "Okay, American works. Let's do the regular main fare."
+      }
+    ],
+    "expected": {
+      "name": "prepare_booking",
+      "arguments": {
+        "offer_id": "OF-2032",
+        "fare": "main"
+      }
+    },
+    "notes": "'Regular main fare' is the main fare."
+  },
+  {
+    "id": "follow_up-007",
+    "category": "follow_up",
+    "today": "2027-01-02",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip Boston to Miami, January 15 to January 20"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "BOS",
+            "destination": "MIA",
+            "departure_date": "2027-01-15",
+            "return_date": "2027-01-20"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-2031",
+              "airline": "JetBlue",
+              "depart": "2027-01-15T08:30",
+              "arrive": "2027-01-15T12:05",
+              "stops": 0,
+              "price_usd": 389
+            },
+            {
+              "offer_id": "OF-2032",
+              "airline": "American",
+              "depart": "2027-01-15T13:15",
+              "arrive": "2027-01-15T16:55",
+              "stops": 0,
+              "price_usd": 412
+            },
+            {
+              "offer_id": "OF-2033",
+              "airline": "Spirit",
+              "depart": "2027-01-15T06:00",
+              "arrive": "2027-01-15T12:40",
+              "stops": 1,
+              "via": "FLL",
+              "price_usd": 221
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: JetBlue nonstop for $389, American nonstop for $412, and Spirit with 1 stop for $221."
+      },
+      {
+        "role": "user",
+        "content": "Does that cheap Spirit option include a carry-on, or am I paying extra for everything?"
+      }
+    ],
+    "expected": {
+      "name": "get_offer_details",
+      "arguments": {
+        "offer_id": "OF-2033"
+      }
+    },
+    "notes": "Baggage is not in the search results, so offer details are needed."
+  },
+  {
+    "id": "follow_up-008",
+    "category": "follow_up",
+    "today": "2027-02-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from Chicago O'Hare to San Diego on February 12"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "ORD",
+            "destination": "SAN",
+            "departure_date": "2027-02-12"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-3041",
+              "airline": "United",
+              "depart": "2027-02-12T08:00",
+              "arrive": "2027-02-12T10:35",
+              "stops": 0,
+              "price_usd": 274
+            },
+            {
+              "offer_id": "OF-3042",
+              "airline": "American",
+              "depart": "2027-02-12T09:20",
+              "arrive": "2027-02-12T14:10",
+              "stops": 1,
+              "via": "DFW",
+              "price_usd": 199
+            },
+            {
+              "offer_id": "OF-3043",
+              "airline": "Alaska",
+              "depart": "2027-02-12T12:45",
+              "arrive": "2027-02-12T17:30",
+              "stops": 1,
+              "via": "SEA",
+              "price_usd": 231
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: United nonstop at 8:00 AM for $274, American with 1 stop at 9:20 AM for $199, and Alaska with 1 stop at 12:45 PM for $231."
+      },
+      {
+        "role": "user",
+        "content": "Let's just do the lowest-priced one. Basic is okay, I won't need changes."
+      }
+    ],
+    "expected": {
+      "name": "prepare_booking",
+      "arguments": {
+        "offer_id": "OF-3042",
+        "fare": "basic"
+      }
+    },
+    "notes": "Cheapest is American at $199."
+  },
+  {
+    "id": "follow_up-009",
+    "category": "follow_up",
+    "today": "2027-02-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from Chicago O'Hare to San Diego on February 12"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "ORD",
+            "destination": "SAN",
+            "departure_date": "2027-02-12"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-3041",
+              "airline": "United",
+              "depart": "2027-02-12T08:00",
+              "arrive": "2027-02-12T10:35",
+              "stops": 0,
+              "price_usd": 274
+            },
+            {
+              "offer_id": "OF-3042",
+              "airline": "American",
+              "depart": "2027-02-12T09:20",
+              "arrive": "2027-02-12T14:10",
+              "stops": 1,
+              "via": "DFW",
+              "price_usd": 199
+            },
+            {
+              "offer_id": "OF-3043",
+              "airline": "Alaska",
+              "depart": "2027-02-12T12:45",
+              "arrive": "2027-02-12T17:30",
+              "stops": 1,
+              "via": "SEA",
+              "price_usd": 231
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: United nonstop at 8:00 AM for $274, American with 1 stop at 9:20 AM for $199, and Alaska with 1 stop at 12:45 PM for $231."
+      },
+      {
+        "role": "user",
+        "content": "I'm not ready to buy United yet. Can you track that nonstop ticket?"
+      }
+    ],
+    "expected": {
+      "name": "create_price_watch",
+      "arguments": {
+        "offer_id": "OF-3041"
+      }
+    },
+    "notes": "No target price given, so alert on any drop."
+  },
+  {
+    "id": "follow_up-010",
+    "category": "follow_up",
+    "today": "2027-02-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from Chicago O'Hare to San Diego on February 12"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "ORD",
+            "destination": "SAN",
+            "departure_date": "2027-02-12"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-3041",
+              "airline": "United",
+              "depart": "2027-02-12T08:00",
+              "arrive": "2027-02-12T10:35",
+              "stops": 0,
+              "price_usd": 274
+            },
+            {
+              "offer_id": "OF-3042",
+              "airline": "American",
+              "depart": "2027-02-12T09:20",
+              "arrive": "2027-02-12T14:10",
+              "stops": 1,
+              "via": "DFW",
+              "price_usd": 199
+            },
+            {
+              "offer_id": "OF-3043",
+              "airline": "Alaska",
+              "depart": "2027-02-12T12:45",
+              "arrive": "2027-02-12T17:30",
+              "stops": 1,
+              "via": "SEA",
+              "price_usd": 231
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: United nonstop at 8:00 AM for $274, American with 1 stop at 9:20 AM for $199, and Alaska with 1 stop at 12:45 PM for $231."
+      },
+      {
+        "role": "user",
+        "content": "Do you think $274 for United is reasonable or should I give it a few days?"
+      }
+    ],
+    "expected": {
+      "name": "get_price_advice",
+      "arguments": {
+        "offer_id": "OF-3041"
+      }
+    }
+  },
+  {
+    "id": "follow_up-011",
+    "category": "follow_up",
+    "today": "2026-12-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "JFK to London Heathrow, December 20, coming back January 4"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "LHR",
+            "departure_date": "2026-12-20",
+            "return_date": "2027-01-04"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-4051",
+              "airline": "British Airways",
+              "depart": "2026-12-20T18:30",
+              "arrive": "2026-12-21T06:40",
+              "stops": 0,
+              "price_usd": 1104
+            },
+            {
+              "offer_id": "OF-4052",
+              "airline": "Virgin Atlantic",
+              "depart": "2026-12-20T19:15",
+              "arrive": "2026-12-21T07:30",
+              "stops": 0,
+              "price_usd": 987
+            },
+            {
+              "offer_id": "OF-4053",
+              "airline": "Aer Lingus",
+              "depart": "2026-12-20T17:00",
+              "arrive": "2026-12-21T09:55",
+              "stops": 1,
+              "via": "DUB",
+              "price_usd": 812
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: British Airways nonstop for $1,104, Virgin Atlantic nonstop for $987, and Aer Lingus with 1 stop in Dublin for $812."
+      },
+      {
+        "role": "user",
+        "content": "Let's take the Virgin Atlantic flight, and I'd rather have the flexible ticket."
+      }
+    ],
+    "expected": {
+      "name": "prepare_booking",
+      "arguments": {
+        "offer_id": "OF-4052",
+        "fare": "flex"
+      }
+    }
+  },
+  {
+    "id": "follow_up-012",
+    "category": "follow_up",
+    "today": "2026-12-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "JFK to London Heathrow, December 20, coming back January 4"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "LHR",
+            "departure_date": "2026-12-20",
+            "return_date": "2027-01-04"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-4051",
+              "airline": "British Airways",
+              "depart": "2026-12-20T18:30",
+              "arrive": "2026-12-21T06:40",
+              "stops": 0,
+              "price_usd": 1104
+            },
+            {
+              "offer_id": "OF-4052",
+              "airline": "Virgin Atlantic",
+              "depart": "2026-12-20T19:15",
+              "arrive": "2026-12-21T07:30",
+              "stops": 0,
+              "price_usd": 987
+            },
+            {
+              "offer_id": "OF-4053",
+              "airline": "Aer Lingus",
+              "depart": "2026-12-20T17:00",
+              "arrive": "2026-12-21T09:55",
+              "stops": 1,
+              "via": "DUB",
+              "price_usd": 812
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: British Airways nonstop for $1,104, Virgin Atlantic nonstop for $987, and Aer Lingus with 1 stop in Dublin for $812."
+      },
+      {
+        "role": "user",
+        "content": "What do you think about the Aer Lingus price — likely to drop at all?"
+      }
+    ],
+    "expected": {
+      "name": "get_price_advice",
+      "arguments": {
+        "offer_id": "OF-4053"
+      }
+    }
+  },
+  {
+    "id": "follow_up-013",
+    "category": "follow_up",
+    "today": "2026-12-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "JFK to London Heathrow, December 20, coming back January 4"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "LHR",
+            "departure_date": "2026-12-20",
+            "return_date": "2027-01-04"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-4051",
+              "airline": "British Airways",
+              "depart": "2026-12-20T18:30",
+              "arrive": "2026-12-21T06:40",
+              "stops": 0,
+              "price_usd": 1104
+            },
+            {
+              "offer_id": "OF-4052",
+              "airline": "Virgin Atlantic",
+              "depart": "2026-12-20T19:15",
+              "arrive": "2026-12-21T07:30",
+              "stops": 0,
+              "price_usd": 987
+            },
+            {
+              "offer_id": "OF-4053",
+              "airline": "Aer Lingus",
+              "depart": "2026-12-20T17:00",
+              "arrive": "2026-12-21T09:55",
+              "stops": 1,
+              "via": "DUB",
+              "price_usd": 812
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: British Airways nonstop for $1,104, Virgin Atlantic nonstop for $987, and Aer Lingus with 1 stop in Dublin for $812."
+      },
+      {
+        "role": "user",
+        "content": "Before I decide, what's the full breakdown for the BA flight?"
+      }
+    ],
+    "expected": {
+      "name": "get_offer_details",
+      "arguments": {
+        "offer_id": "OF-4051"
+      }
+    }
+  },
+  {
+    "id": "follow_up-014",
+    "category": "follow_up",
+    "today": "2026-12-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "JFK to London Heathrow, December 20, coming back January 4"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "LHR",
+            "departure_date": "2026-12-20",
+            "return_date": "2027-01-04"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-4051",
+              "airline": "British Airways",
+              "depart": "2026-12-20T18:30",
+              "arrive": "2026-12-21T06:40",
+              "stops": 0,
+              "price_usd": 1104
+            },
+            {
+              "offer_id": "OF-4052",
+              "airline": "Virgin Atlantic",
+              "depart": "2026-12-20T19:15",
+              "arrive": "2026-12-21T07:30",
+              "stops": 0,
+              "price_usd": 987
+            },
+            {
+              "offer_id": "OF-4053",
+              "airline": "Aer Lingus",
+              "depart": "2026-12-20T17:00",
+              "arrive": "2026-12-21T09:55",
+              "stops": 1,
+              "via": "DUB",
+              "price_usd": 812
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: British Airways nonstop for $1,104, Virgin Atlantic nonstop for $987, and Aer Lingus with 1 stop in Dublin for $812."
+      },
+      {
+        "role": "user",
+        "content": "If the Aer Lingus one gets under $750, I want to know."
+      }
+    ],
+    "expected": {
+      "name": "create_price_watch",
+      "arguments": {
+        "offer_id": "OF-4053",
+        "target_price": 750
+      }
+    }
+  },
+  {
+    "id": "follow_up-015",
+    "category": "follow_up",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "what about the price on the united one"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "get_price_advice",
+          "arguments": {
+            "offer_id": "OF-1022"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "get_price_advice",
+        "content": {
+          "offer_id": "OF-1022",
+          "verdict": "wait",
+          "expected_change_usd": -30,
+          "confidence": "medium"
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Prices on this route usually drop closer to the date. I'd suggest waiting; it may fall by about $30."
+      },
+      {
+        "role": "user",
+        "content": "Yeah, just watch that one for me instead of booking it."
+      }
+    ],
+    "expected": {
+      "name": "create_price_watch",
+      "arguments": {
+        "offer_id": "OF-1022"
+      }
+    },
+    "notes": "'It' is the United offer from the previous turn."
+  },
+  {
     "id": "bookings-001",
     "category": "bookings",
     "today": "2026-12-01",
     "messages": [
       {
         "role": "user",
-        "content": "Cancel my Miami trip"
+        "content": "I may need to cancel my Miami trip. Can you pull up my reservations first?"
       }
     ],
     "expected": {
@@ -168,13 +2005,240 @@
     "notes": "The booking ID is unknown, so the right first step is to look up bookings, not to ask the user for an ID."
   },
   {
+    "id": "bookings-002",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I've lost track of my flights. What do I have booked right now?"
+      }
+    ],
+    "expected": {
+      "name": "list_bookings",
+      "arguments": {}
+    }
+  },
+  {
+    "id": "bookings-003",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you pull up my reservations? I want to double-check them."
+      }
+    ],
+    "expected": {
+      "name": "list_bookings",
+      "arguments": {}
+    }
+  },
+  {
+    "id": "bookings-004",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Show me my bookings"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-7731",
+              "trip": "round trip",
+              "route": "IAD-MIA",
+              "depart": "2026-12-23",
+              "return": "2026-12-30",
+              "airline": "American"
+            },
+            {
+              "booking_id": "BK-7790",
+              "trip": "one way",
+              "route": "DCA-ORD",
+              "depart": "2027-01-08",
+              "airline": "United"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a round trip Dulles to Miami on American, December 23 to 30, and a one-way Reagan to Chicago O'Hare on United on January 8."
+      },
+      {
+        "role": "user",
+        "content": "Actually I can't make Chicago. Cancel that booking, please."
+      }
+    ],
+    "expected": {
+      "name": "prepare_cancellation",
+      "arguments": {
+        "booking_id": "BK-7790"
+      }
+    }
+  },
+  {
+    "id": "bookings-005",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Show me my bookings"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-7731",
+              "trip": "round trip",
+              "route": "IAD-MIA",
+              "depart": "2026-12-23",
+              "return": "2026-12-30",
+              "airline": "American"
+            },
+            {
+              "booking_id": "BK-7790",
+              "trip": "one way",
+              "route": "DCA-ORD",
+              "depart": "2027-01-08",
+              "airline": "United"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a round trip Dulles to Miami on American, December 23 to 30, and a one-way Reagan to Chicago O'Hare on United on January 8."
+      },
+      {
+        "role": "user",
+        "content": "The Miami plans fell through, so let's cancel that reservation."
+      }
+    ],
+    "expected": {
+      "name": "prepare_cancellation",
+      "arguments": {
+        "booking_id": "BK-7731"
+      }
+    },
+    "notes": "The Miami trip is one round-trip booking."
+  },
+  {
+    "id": "bookings-006",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My plans changed and I need to ditch the Chicago flight. Can you sort that out?"
+      }
+    ],
+    "expected": {
+      "name": "list_bookings",
+      "arguments": {}
+    },
+    "notes": "No booking ID known yet, so look it up first."
+  },
+  {
+    "id": "bookings-007",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I booked something for December, I think. Can you see whether it shows up under my trips?"
+      }
+    ],
+    "expected": {
+      "name": "list_bookings",
+      "arguments": {}
+    }
+  },
+  {
+    "id": "bookings-008",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Show me my bookings"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-7731",
+              "trip": "round trip",
+              "route": "IAD-MIA",
+              "depart": "2026-12-23",
+              "return": "2026-12-30",
+              "airline": "American"
+            },
+            {
+              "booking_id": "BK-7790",
+              "trip": "one way",
+              "route": "DCA-ORD",
+              "depart": "2027-01-08",
+              "airline": "United"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a round trip Dulles to Miami on American, December 23 to 30, and a one-way Reagan to Chicago O'Hare on United on January 8."
+      },
+      {
+        "role": "user",
+        "content": "Never mind, I won't be traveling January 8. Cancel that flight."
+      }
+    ],
+    "expected": {
+      "name": "prepare_cancellation",
+      "arguments": {
+        "booking_id": "BK-7790"
+      }
+    }
+  },
+  {
     "id": "clarify-001",
     "category": "clarify",
     "today": "2026-12-01",
     "messages": [
       {
         "role": "user",
-        "content": "I want to fly to Denver on Friday"
+        "content": "I'm looking to get to Denver this Friday. Can you find me a flight?"
       }
     ],
     "expected": {
@@ -184,6 +2248,433 @@
       }
     },
     "notes": "No origin. Skylark does not know the user's home airport."
+  },
+  {
+    "id": "clarify-002",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Denver to Austin on December 10, round-trip. Still figuring out my plans on the other end."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "When would you like to fly back from Austin?"
+      }
+    },
+    "notes": "Round trip requested but no return date given."
+  },
+  {
+    "id": "clarify-003",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you get me to Seattle on the 20th of December?"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Where will you be flying from?"
+      }
+    },
+    "notes": "No origin."
+  },
+  {
+    "id": "clarify-004",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Thinking about Boston to Chicago. What flights are there?"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "What date would you like to fly?"
+      }
+    },
+    "notes": "No date."
+  },
+  {
+    "id": "clarify-005",
+    "category": "clarify",
+    "today": "2026-12-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I need Atlanta to Miami in January, preferably not too expensive."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Which day in January would you like to leave?"
+      }
+    },
+    "notes": "A month is not a date; flexible-date search is not supported."
+  },
+  {
+    "id": "clarify-006",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "That United option is fine, go ahead and book it."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Which fare would you like: basic, main, or flex?"
+      }
+    },
+    "notes": "Booking needs a fare."
+  },
+  {
+    "id": "clarify-007",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Perfect, I'll take that one."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Which flight would you like to book: Alaska, United, or Delta?"
+      }
+    },
+    "notes": "Three offers were shown; 'that one' is unclear."
+  },
+  {
+    "id": "clarify-008",
+    "category": "clarify",
+    "today": "2027-01-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'm going from Phoenix to Denver on February 2 and coming back afterward."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "When would you like to return?"
+      }
+    },
+    "notes": "Round trip without a return date."
+  },
+  {
+    "id": "clarify-009",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you find me something to Orlando next month?"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Where are you flying from, and which day in January?"
+      }
+    },
+    "notes": "No origin and no date."
+  },
+  {
+    "id": "clarify-010",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to visit family for Christmas. Can you find me a flight home?"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Where are you flying from and to, and which day?"
+      }
+    },
+    "notes": "Neither airport is known."
+  },
+  {
+    "id": "clarify-011",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Seattle to Portland on the 18th — what have you got?"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Do you mean Portland, Oregon or Portland, Maine?"
+      }
+    },
+    "notes": "Portland is ambiguous: PDX (Oregon) or PWM (Maine)."
+  },
+  {
+    "id": "clarify-012",
+    "category": "clarify",
+    "today": "2027-01-02",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip Boston to Miami, January 15 to January 20"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "BOS",
+            "destination": "MIA",
+            "departure_date": "2027-01-15",
+            "return_date": "2027-01-20"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-2031",
+              "airline": "JetBlue",
+              "depart": "2027-01-15T08:30",
+              "arrive": "2027-01-15T12:05",
+              "stops": 0,
+              "price_usd": 389
+            },
+            {
+              "offer_id": "OF-2032",
+              "airline": "American",
+              "depart": "2027-01-15T13:15",
+              "arrive": "2027-01-15T16:55",
+              "stops": 0,
+              "price_usd": 412
+            },
+            {
+              "offer_id": "OF-2033",
+              "airline": "Spirit",
+              "depart": "2027-01-15T06:00",
+              "arrive": "2027-01-15T12:40",
+              "stops": 1,
+              "via": "FLL",
+              "price_usd": 221
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: JetBlue nonstop for $389, American nonstop for $412, and Spirit with 1 stop for $221."
+      },
+      {
+        "role": "user",
+        "content": "I'll pick the nonstop one. Let's book it."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Both JetBlue and American are nonstop. Which one would you like?"
+      }
+    },
+    "notes": "Two nonstop offers."
+  },
+  {
+    "id": "clarify-013",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What's the first flight I can catch leaving Denver tomorrow?"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Where would you like to fly to?"
+      }
+    },
+    "notes": "No destination."
+  },
+  {
+    "id": "clarify-014",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Show me my bookings"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-7731",
+              "trip": "round trip",
+              "route": "IAD-MIA",
+              "depart": "2026-12-23",
+              "return": "2026-12-30",
+              "airline": "American"
+            },
+            {
+              "booking_id": "BK-7790",
+              "trip": "one way",
+              "route": "DCA-ORD",
+              "depart": "2027-01-08",
+              "airline": "United"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a round trip Dulles to Miami on American, December 23 to 30, and a one-way Reagan to Chicago O'Hare on United on January 8."
+      },
+      {
+        "role": "user",
+        "content": "I changed my mind. Cancel my ticket."
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Which booking would you like to cancel: Miami or Chicago?"
+      }
+    },
+    "notes": "Two bookings; which one is unclear."
   },
   {
     "id": "decline-001",
@@ -243,7 +2734,7 @@
       },
       {
         "role": "user",
-        "content": "Can you also find me a hotel near the Seattle airport?"
+        "content": "Great, and can you also reserve a hotel by the Seattle airport?"
       }
     ],
     "expected": {
@@ -252,6 +2743,216 @@
         "reason": "Skylark can only help with flights, not hotels."
       }
     }
+  },
+  {
+    "id": "decline-002",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you arrange a rental car for when I land in Miami?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark only helps with flights, not car rentals."
+      }
+    }
+  },
+  {
+    "id": "decline-003",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick question before I book: will I need an Ethiopian visa?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark can't give visa advice; please check official government sources."
+      }
+    }
+  },
+  {
+    "id": "decline-004",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's my card, go ahead and charge it for the ticket."
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark never takes payment details in chat; payment happens securely in the app."
+      }
+    },
+    "notes": "Payment details are never handled by the model."
+  },
+  {
+    "id": "decline-005",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Is Denver getting snow this week? I'm trying to pack properly."
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark only helps with flights, not weather forecasts."
+      }
+    }
+  },
+  {
+    "id": "decline-006",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Could you grab me a ride to Dulles as well?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark can't book ground transportation."
+      }
+    }
+  },
+  {
+    "id": "decline-007",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Random request: write me a funny poem about being stuck at an airport."
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark is a flight assistant and can only help with flights."
+      }
+    }
+  },
+  {
+    "id": "decline-008",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Show me my bookings"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-7731",
+              "trip": "round trip",
+              "route": "IAD-MIA",
+              "depart": "2026-12-23",
+              "return": "2026-12-30",
+              "airline": "American"
+            },
+            {
+              "booking_id": "BK-7790",
+              "trip": "one way",
+              "route": "DCA-ORD",
+              "depart": "2027-01-08",
+              "airline": "United"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a round trip Dulles to Miami on American, December 23 to 30, and a one-way Reagan to Chicago O'Hare on United on January 8."
+      },
+      {
+        "role": "user",
+        "content": "Can you switch me to an exit-row seat for the Chicago flight?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark can't change seat assignments yet."
+      }
+    },
+    "notes": "No seat-selection tool exists."
   },
   {
     "id": "respond-001",
@@ -311,7 +3012,7 @@
       },
       {
         "role": "user",
-        "content": "Which of those is nonstop?"
+        "content": "Remind me, which of those flights doesn't have a connection?"
       }
     ],
     "expected": {
@@ -323,13 +3024,346 @@
     "notes": "The answer is already in the search results, so no tool is needed."
   },
   {
+    "id": "respond-002",
+    "category": "respond",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Remind me, when does the Delta one actually get in?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "The Delta flight lands at 10:15 PM."
+      }
+    }
+  },
+  {
+    "id": "respond-003",
+    "category": "respond",
+    "today": "2027-01-02",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip Boston to Miami, January 15 to January 20"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "BOS",
+            "destination": "MIA",
+            "departure_date": "2027-01-15",
+            "return_date": "2027-01-20"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-2031",
+              "airline": "JetBlue",
+              "depart": "2027-01-15T08:30",
+              "arrive": "2027-01-15T12:05",
+              "stops": 0,
+              "price_usd": 389
+            },
+            {
+              "offer_id": "OF-2032",
+              "airline": "American",
+              "depart": "2027-01-15T13:15",
+              "arrive": "2027-01-15T16:55",
+              "stops": 0,
+              "price_usd": 412
+            },
+            {
+              "offer_id": "OF-2033",
+              "airline": "Spirit",
+              "depart": "2027-01-15T06:00",
+              "arrive": "2027-01-15T12:40",
+              "stops": 1,
+              "via": "FLL",
+              "price_usd": 221
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: JetBlue nonstop for $389, American nonstop for $412, and Spirit with 1 stop for $221."
+      },
+      {
+        "role": "user",
+        "content": "What was the price on Spirit again?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "The Spirit round trip is $221."
+      }
+    }
+  },
+  {
+    "id": "respond-004",
+    "category": "respond",
+    "today": "2027-02-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from Chicago O'Hare to San Diego on February 12"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "ORD",
+            "destination": "SAN",
+            "departure_date": "2027-02-12"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-3041",
+              "airline": "United",
+              "depart": "2027-02-12T08:00",
+              "arrive": "2027-02-12T10:35",
+              "stops": 0,
+              "price_usd": 274
+            },
+            {
+              "offer_id": "OF-3042",
+              "airline": "American",
+              "depart": "2027-02-12T09:20",
+              "arrive": "2027-02-12T14:10",
+              "stops": 1,
+              "via": "DFW",
+              "price_usd": 199
+            },
+            {
+              "offer_id": "OF-3043",
+              "airline": "Alaska",
+              "depart": "2027-02-12T12:45",
+              "arrive": "2027-02-12T17:30",
+              "stops": 1,
+              "via": "SEA",
+              "price_usd": 231
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: United nonstop at 8:00 AM for $274, American with 1 stop at 9:20 AM for $199, and Alaska with 1 stop at 12:45 PM for $231."
+      },
+      {
+        "role": "user",
+        "content": "Sorry, which airline was the one without a layover?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "United has the only nonstop, at 8:00 AM for $274."
+      }
+    }
+  },
+  {
+    "id": "respond-005",
+    "category": "respond",
+    "today": "2026-12-05",
+    "messages": [
+      {
+        "role": "user",
+        "content": "JFK to London Heathrow, December 20, coming back January 4"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "LHR",
+            "departure_date": "2026-12-20",
+            "return_date": "2027-01-04"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-4051",
+              "airline": "British Airways",
+              "depart": "2026-12-20T18:30",
+              "arrive": "2026-12-21T06:40",
+              "stops": 0,
+              "price_usd": 1104
+            },
+            {
+              "offer_id": "OF-4052",
+              "airline": "Virgin Atlantic",
+              "depart": "2026-12-20T19:15",
+              "arrive": "2026-12-21T07:30",
+              "stops": 0,
+              "price_usd": 987
+            },
+            {
+              "offer_id": "OF-4053",
+              "airline": "Aer Lingus",
+              "depart": "2026-12-20T17:00",
+              "arrive": "2026-12-21T09:55",
+              "stops": 1,
+              "via": "DUB",
+              "price_usd": 812
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: British Airways nonstop for $1,104, Virgin Atlantic nonstop for $987, and Aer Lingus with 1 stop in Dublin for $812."
+      },
+      {
+        "role": "user",
+        "content": "Does Aer Lingus have a layover? If so, where?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "It has 1 stop, in Dublin."
+      }
+    }
+  },
+  {
+    "id": "respond-006",
+    "category": "respond",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Show me my bookings"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-7731",
+              "trip": "round trip",
+              "route": "IAD-MIA",
+              "depart": "2026-12-23",
+              "return": "2026-12-30",
+              "airline": "American"
+            },
+            {
+              "booking_id": "BK-7790",
+              "trip": "one way",
+              "route": "DCA-ORD",
+              "depart": "2027-01-08",
+              "airline": "United"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a round trip Dulles to Miami on American, December 23 to 30, and a one-way Reagan to Chicago O'Hare on United on January 8."
+      },
+      {
+        "role": "user",
+        "content": "I forgot the date of my Chicago trip. What was it again?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "Your Chicago flight is on January 8, Reagan to O'Hare on United."
+      }
+    }
+  },
+  {
     "id": "messy-001",
     "category": "messy",
     "today": "2026-12-01",
     "messages": [
       {
         "role": "user",
-        "content": "need 2 tix ATL->MCO dec 22 cheapest pls"
+        "content": "2 tickets atl > orlando dec22 plz cheapest"
       }
     ],
     "expected": {
@@ -342,5 +3376,67 @@
       }
     },
     "notes": "'cheapest' does not change the search; results are compared afterwards."
+  },
+  {
+    "id": "messy-002",
+    "category": "messy",
+    "today": "2026-12-15",
+    "messages": [
+      {
+        "role": "user",
+        "content": "yo any flights bostn -> denver jan 7?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BOS",
+        "destination": "DEN",
+        "departure_date": "2027-01-07"
+      }
+    },
+    "notes": "'bostn' is a typo for Boston."
+  },
+  {
+    "id": "messy-003",
+    "category": "messy",
+    "today": "2026-12-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "SEATTLE TO ANCHORAGE DEC 22 NEED A FLIGHT ASAP"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "SEA",
+        "destination": "ANC",
+        "departure_date": "2026-12-22"
+      }
+    }
+  },
+  {
+    "id": "messy-004",
+    "category": "messy",
+    "today": "2027-01-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "atl-lax feb 14 2 adults me n wife return feb 18 direct only"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ATL",
+        "destination": "LAX",
+        "departure_date": "2027-02-14",
+        "return_date": "2027-02-18",
+        "adults": 2,
+        "max_stops": 0
+      }
+    },
+    "notes": "'Direct only' means nonstop; 'return feb 18' makes it a round trip."
   }
 ]
