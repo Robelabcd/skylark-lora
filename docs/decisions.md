@@ -17,3 +17,6 @@
 | 2026-11-21 | Scoring: all-or-nothing per case, no partial credit | A search with a wrong date is a wrong search; matches standard tool-calling benchmarks |
 | 2026-11-21 | Lenient parsing, with format compliance reported separately | Grades reasoning fairly while still showing formatting gains from LoRA |
 | 2026-11-21 | Calls compared with defaults filled in; outcome text not scored | Same meaning scores the same; clarify/decline/respond wording has no single right answer |
+| 2026-11-21 | Base model: Qwen/Qwen3-1.7B (Apache 2.0), non-thinking mode, greedy decoding | Text-only with standard attention, so a hand-written LoRA layer drops cleanly into q/k/v/o; deterministic answers |
+| 2026-11-21 | One shared prompt and JSON output format for every model; tool results shown as user messages | Same exam for all models; works with any chat API; the scorer needs no per-model code |
+| 2026-11-21 | Baselines: Qwen zero-shot, Qwen few-shot (4 examples not from the test set), one OpenAI model | Measures the starting point, whether better prompting is enough, and a commercial reference |

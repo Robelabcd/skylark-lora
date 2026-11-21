@@ -20,6 +20,14 @@ dev = [
   "pytest>=8",          # automatic tests
   "ruff>=0.6",          # code formatter + linter
 ]
+gpu = [
+  "torch",              # runs the model (preinstalled on Colab)
+  "transformers>=4.51", # loads Qwen3 (needs 4.51 or newer)
+  "accelerate",         # places the model on the GPU (device_map="auto")
+]
+openai = [
+  "openai>=1",          # commercial baseline (Step 4)
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
