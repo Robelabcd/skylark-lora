@@ -14,3 +14,6 @@
 | 2026-11-21 | Test set: 100 cases in 10 categories, finished before any training data exists | A fair exam: never trained on, not shaped by the data generator, frozen before scoring |
 | 2026-11-21 | Test set stored as a pretty-printed JSON list, checked on load | Easy to write by hand; mistakes in the answer key fail loudly |
 | 2026-11-21 | Test set complete: 100 cases. Answers drafted with Claude; every user message rewritten by Robel; all 100 reviewed by Robel | Fast enough for the course timeline while keeping human phrasing and human review; stated openly |
+| 2026-11-21 | Scoring: all-or-nothing per case, no partial credit | A search with a wrong date is a wrong search; matches standard tool-calling benchmarks |
+| 2026-11-21 | Lenient parsing, with format compliance reported separately | Grades reasoning fairly while still showing formatting gains from LoRA |
+| 2026-11-21 | Calls compared with defaults filled in; outcome text not scored | Same meaning scores the same; clarify/decline/respond wording has no single right answer |
