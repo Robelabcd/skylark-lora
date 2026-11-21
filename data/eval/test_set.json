@@ -1,0 +1,346 @@
+[
+  {
+    "id": "simple_search-001",
+    "category": "simple_search",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I need a flight from Boston to Denver on December 15"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "BOS",
+        "destination": "DEN",
+        "departure_date": "2026-12-15"
+      }
+    }
+  },
+  {
+    "id": "search_options-001",
+    "category": "search_options",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip JFK to LAX for 2 adults, leaving Dec 18 and coming back Jan 3. Nonstop, business class."
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "JFK",
+        "destination": "LAX",
+        "departure_date": "2026-12-18",
+        "return_date": "2027-01-03",
+        "adults": 2,
+        "cabin": "business",
+        "max_stops": 0
+      }
+    },
+    "notes": "Jan 3 is after today's date in December, so it means 2027."
+  },
+  {
+    "id": "relative_date-001",
+    "category": "relative_date",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "anything from dulles to seattle this friday?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "IAD",
+        "destination": "SEA",
+        "departure_date": "2026-12-04"
+      }
+    },
+    "notes": "Today is Tuesday 2026-12-01, so this Friday is 2026-12-04."
+  },
+  {
+    "id": "city_airport-001",
+    "category": "city_airport",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fly me from DC to Chicago on the 12th"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "WAS",
+        "destination": "CHI",
+        "departure_date": "2026-12-12"
+      }
+    },
+    "notes": "Multi-airport cities use metro codes: WAS (IAD, DCA, BWI), CHI (ORD, MDW)."
+  },
+  {
+    "id": "follow_up-001",
+    "category": "follow_up",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Is the cheapest one a good deal or should I wait?"
+      }
+    ],
+    "expected": {
+      "name": "get_price_advice",
+      "arguments": {
+        "offer_id": "OF-1022"
+      }
+    },
+    "notes": "The cheapest offer is United at $248 (OF-1022)."
+  },
+  {
+    "id": "bookings-001",
+    "category": "bookings",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Cancel my Miami trip"
+      }
+    ],
+    "expected": {
+      "name": "list_bookings",
+      "arguments": {}
+    },
+    "notes": "The booking ID is unknown, so the right first step is to look up bookings, not to ask the user for an ID."
+  },
+  {
+    "id": "clarify-001",
+    "category": "clarify",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to fly to Denver on Friday"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Which airport or city will you be flying from?"
+      }
+    },
+    "notes": "No origin. Skylark does not know the user's home airport."
+  },
+  {
+    "id": "decline-001",
+    "category": "decline",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Can you also find me a hotel near the Seattle airport?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark can only help with flights, not hotels."
+      }
+    }
+  },
+  {
+    "id": "respond-001",
+    "category": "respond",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me flights from Dulles to Seattle on December 18"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "IAD",
+            "destination": "SEA",
+            "departure_date": "2026-12-18"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-1021",
+              "airline": "Alaska",
+              "depart": "2026-12-18T07:10",
+              "arrive": "2026-12-18T10:05",
+              "stops": 0,
+              "price_usd": 312
+            },
+            {
+              "offer_id": "OF-1022",
+              "airline": "United",
+              "depart": "2026-12-18T11:45",
+              "arrive": "2026-12-18T17:20",
+              "stops": 1,
+              "price_usd": 248
+            },
+            {
+              "offer_id": "OF-1023",
+              "airline": "Delta",
+              "depart": "2026-12-18T16:30",
+              "arrive": "2026-12-18T22:15",
+              "stops": 1,
+              "price_usd": 276
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Alaska nonstop at 7:10 AM for $312, United with 1 stop at 11:45 AM for $248, and Delta with 1 stop at 4:30 PM for $276."
+      },
+      {
+        "role": "user",
+        "content": "Which of those is nonstop?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "The Alaska flight at 7:10 AM for $312 is the only nonstop."
+      }
+    },
+    "notes": "The answer is already in the search results, so no tool is needed."
+  },
+  {
+    "id": "messy-001",
+    "category": "messy",
+    "today": "2026-12-01",
+    "messages": [
+      {
+        "role": "user",
+        "content": "need 2 tix ATL->MCO dec 22 cheapest pls"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ATL",
+        "destination": "MCO",
+        "departure_date": "2026-12-22",
+        "adults": 2
+      }
+    },
+    "notes": "'cheapest' does not change the search; results are compared afterwards."
+  }
+]

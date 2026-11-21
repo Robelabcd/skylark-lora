@@ -10,3 +10,6 @@
 | 2026-11-21 | `clarify`, `decline`, `respond` as explicit outcomes | Knowing when *not* to call a tool is scored exactly like a tool call |
 | 2026-11-21 | Strict validation: no type coercion, no extra arguments, IATA codes, YYYY-MM-DD dates | One correct answer per request, so scoring is exact; no payment fields can slip in |
 | 2026-11-21 | Lean inputs: adults only, no children/infants or flexible dates | Fewer arguments means cleaner results within the course timeline; can be added later |
+| 2026-11-21 | Multi-airport cities use IATA metro codes (WAS, NYC, CHI) | Matches how real flight search works; no needless questions to the user |
+| 2026-11-21 | Test set: 100 hand-written cases in 10 categories, written by Robel before any training data | A fair exam: never trained on, not shaped by the data generator, frozen before scoring |
+| 2026-11-21 | Test set stored as a pretty-printed JSON list, checked on load | Easy to write by hand; mistakes in the answer key fail loudly |

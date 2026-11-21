@@ -32,7 +32,7 @@ For outcomes, only the name is scored exactly; the free text is checked separate
 
 ## Rules
 
-- Airports are 3-letter uppercase IATA codes (`IAD`, not `Dulles` or `iad`).
+- Airports are 3-letter uppercase IATA codes (`IAD`, not `Dulles` or `iad`). Multi-airport cities named without a specific airport use metro codes: `WAS`, `NYC`, `CHI`.
 - Dates are `YYYY-MM-DD`. Today's date is given in the system prompt, so relative dates ("next Friday") have one correct answer.
 - No type guessing: `2` is valid for `adults`, `"2"` is not.
 - Unknown argument names are errors, so no payment field can slip into a call.
