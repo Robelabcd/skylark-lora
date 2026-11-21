@@ -6,3 +6,7 @@
 | 2026-11-18 | Code in `src/` package, thin notebooks | Reproducible, testable, readable |
 | 2026-11-18 | Base model: Qwen instruct, 1.5–4B (confirm at Step 4) | Strong small models with tool-calling support |
 | 2026-11-18 | Teacher for training data: an open model, not GPT | No terms restrictions; data and model can be published and used commercially |
+| 2026-11-21 | 7 tools, including `list_bookings` | Users say "cancel my SFO trip", not a booking ID; the model needs a way to look bookings up |
+| 2026-11-21 | `clarify`, `decline`, `respond` as explicit outcomes | Knowing when *not* to call a tool is scored exactly like a tool call |
+| 2026-11-21 | Strict validation: no type coercion, no extra arguments, IATA codes, YYYY-MM-DD dates | One correct answer per request, so scoring is exact; no payment fields can slip in |
+| 2026-11-21 | Lean inputs: adults only, no children/infants or flexible dates | Fewer arguments means cleaner results within the course timeline; can be added later |
