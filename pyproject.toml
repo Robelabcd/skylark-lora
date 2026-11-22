@@ -32,5 +32,8 @@ openai = [
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+skylark_lora = ["datagen/*.json"]   # airport list used by the data generator
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

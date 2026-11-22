@@ -1,0 +1,1021 @@
+{
+ "airports": [
+  {
+   "code": "ATL",
+   "city": "Atlanta",
+   "refs": [
+    "Atlanta",
+    "ATL",
+    "Hartsfield-Jackson"
+   ]
+  },
+  {
+   "code": "BOS",
+   "city": "Boston",
+   "refs": [
+    "Boston",
+    "BOS",
+    "Logan"
+   ]
+  },
+  {
+   "code": "BWI",
+   "city": "Baltimore",
+   "refs": [
+    "Baltimore",
+    "BWI"
+   ]
+  },
+  {
+   "code": "IAD",
+   "city": "Washington Dulles",
+   "refs": [
+    "Dulles",
+    "Washington Dulles",
+    "IAD"
+   ]
+  },
+  {
+   "code": "DCA",
+   "city": "Washington Reagan",
+   "refs": [
+    "Reagan National",
+    "Reagan",
+    "DCA"
+   ]
+  },
+  {
+   "code": "JFK",
+   "city": "New York JFK",
+   "refs": [
+    "JFK",
+    "Kennedy"
+   ]
+  },
+  {
+   "code": "LGA",
+   "city": "New York LaGuardia",
+   "refs": [
+    "LaGuardia",
+    "LGA"
+   ]
+  },
+  {
+   "code": "EWR",
+   "city": "Newark",
+   "refs": [
+    "Newark",
+    "EWR"
+   ]
+  },
+  {
+   "code": "ORD",
+   "city": "Chicago O'Hare",
+   "refs": [
+    "O'Hare",
+    "ORD"
+   ]
+  },
+  {
+   "code": "MDW",
+   "city": "Chicago Midway",
+   "refs": [
+    "Midway",
+    "MDW"
+   ]
+  },
+  {
+   "code": "LAX",
+   "city": "Los Angeles",
+   "refs": [
+    "Los Angeles",
+    "LA",
+    "LAX"
+   ]
+  },
+  {
+   "code": "SFO",
+   "city": "San Francisco",
+   "refs": [
+    "San Francisco",
+    "SF",
+    "SFO"
+   ]
+  },
+  {
+   "code": "OAK",
+   "city": "Oakland",
+   "refs": [
+    "Oakland",
+    "OAK"
+   ]
+  },
+  {
+   "code": "SEA",
+   "city": "Seattle",
+   "refs": [
+    "Seattle",
+    "Sea-Tac",
+    "SEA"
+   ]
+  },
+  {
+   "code": "PDX",
+   "city": "Portland, Oregon",
+   "refs": [
+    "Portland, Oregon",
+    "PDX"
+   ]
+  },
+  {
+   "code": "PWM",
+   "city": "Portland, Maine",
+   "refs": [
+    "Portland, Maine",
+    "PWM"
+   ]
+  },
+  {
+   "code": "DEN",
+   "city": "Denver",
+   "refs": [
+    "Denver",
+    "DEN"
+   ]
+  },
+  {
+   "code": "PHX",
+   "city": "Phoenix",
+   "refs": [
+    "Phoenix",
+    "Sky Harbor",
+    "PHX"
+   ]
+  },
+  {
+   "code": "LAS",
+   "city": "Las Vegas",
+   "refs": [
+    "Las Vegas",
+    "Vegas",
+    "LAS"
+   ]
+  },
+  {
+   "code": "SAN",
+   "city": "San Diego",
+   "refs": [
+    "San Diego",
+    "SAN"
+   ]
+  },
+  {
+   "code": "SLC",
+   "city": "Salt Lake City",
+   "refs": [
+    "Salt Lake City",
+    "Salt Lake",
+    "SLC"
+   ]
+  },
+  {
+   "code": "DFW",
+   "city": "Dallas/Fort Worth",
+   "refs": [
+    "Dallas/Fort Worth",
+    "DFW"
+   ]
+  },
+  {
+   "code": "DAL",
+   "city": "Dallas Love Field",
+   "refs": [
+    "Love Field",
+    "DAL"
+   ]
+  },
+  {
+   "code": "IAH",
+   "city": "Houston Bush",
+   "refs": [
+    "Houston Bush",
+    "Bush Intercontinental",
+    "IAH"
+   ]
+  },
+  {
+   "code": "HOU",
+   "city": "Houston Hobby",
+   "refs": [
+    "Hobby",
+    "Houston Hobby"
+   ]
+  },
+  {
+   "code": "MIA",
+   "city": "Miami",
+   "refs": [
+    "Miami",
+    "MIA"
+   ]
+  },
+  {
+   "code": "FLL",
+   "city": "Fort Lauderdale",
+   "refs": [
+    "Fort Lauderdale",
+    "FLL"
+   ]
+  },
+  {
+   "code": "MCO",
+   "city": "Orlando",
+   "refs": [
+    "Orlando",
+    "MCO"
+   ]
+  },
+  {
+   "code": "TPA",
+   "city": "Tampa",
+   "refs": [
+    "Tampa",
+    "TPA"
+   ]
+  },
+  {
+   "code": "MSY",
+   "city": "New Orleans",
+   "refs": [
+    "New Orleans",
+    "MSY"
+   ]
+  },
+  {
+   "code": "BNA",
+   "city": "Nashville",
+   "refs": [
+    "Nashville",
+    "BNA"
+   ]
+  },
+  {
+   "code": "CLT",
+   "city": "Charlotte",
+   "refs": [
+    "Charlotte",
+    "CLT"
+   ]
+  },
+  {
+   "code": "RDU",
+   "city": "Raleigh-Durham",
+   "refs": [
+    "Raleigh-Durham",
+    "Raleigh",
+    "RDU"
+   ]
+  },
+  {
+   "code": "PHL",
+   "city": "Philadelphia",
+   "refs": [
+    "Philadelphia",
+    "Philly",
+    "PHL"
+   ]
+  },
+  {
+   "code": "PIT",
+   "city": "Pittsburgh",
+   "refs": [
+    "Pittsburgh",
+    "PIT"
+   ]
+  },
+  {
+   "code": "DTW",
+   "city": "Detroit",
+   "refs": [
+    "Detroit",
+    "DTW"
+   ]
+  },
+  {
+   "code": "MSP",
+   "city": "Minneapolis",
+   "refs": [
+    "Minneapolis",
+    "the Twin Cities",
+    "MSP"
+   ]
+  },
+  {
+   "code": "STL",
+   "city": "St. Louis",
+   "refs": [
+    "St. Louis",
+    "STL"
+   ]
+  },
+  {
+   "code": "MCI",
+   "city": "Kansas City",
+   "refs": [
+    "Kansas City",
+    "MCI"
+   ]
+  },
+  {
+   "code": "AUS",
+   "city": "Austin",
+   "refs": [
+    "Austin",
+    "AUS"
+   ]
+  },
+  {
+   "code": "SAT",
+   "city": "San Antonio",
+   "refs": [
+    "San Antonio",
+    "SAT"
+   ]
+  },
+  {
+   "code": "HNL",
+   "city": "Honolulu",
+   "refs": [
+    "Honolulu",
+    "HNL"
+   ]
+  },
+  {
+   "code": "OGG",
+   "city": "Maui",
+   "refs": [
+    "Maui",
+    "Kahului",
+    "OGG"
+   ]
+  },
+  {
+   "code": "ANC",
+   "city": "Anchorage",
+   "refs": [
+    "Anchorage",
+    "ANC"
+   ]
+  },
+  {
+   "code": "SMF",
+   "city": "Sacramento",
+   "refs": [
+    "Sacramento",
+    "SMF"
+   ]
+  },
+  {
+   "code": "CLE",
+   "city": "Cleveland",
+   "refs": [
+    "Cleveland",
+    "CLE"
+   ]
+  },
+  {
+   "code": "IND",
+   "city": "Indianapolis",
+   "refs": [
+    "Indianapolis",
+    "IND"
+   ]
+  },
+  {
+   "code": "MKE",
+   "city": "Milwaukee",
+   "refs": [
+    "Milwaukee",
+    "MKE"
+   ]
+  },
+  {
+   "code": "BUF",
+   "city": "Buffalo",
+   "refs": [
+    "Buffalo",
+    "BUF"
+   ]
+  },
+  {
+   "code": "ABQ",
+   "city": "Albuquerque",
+   "refs": [
+    "Albuquerque",
+    "ABQ"
+   ]
+  },
+  {
+   "code": "TUS",
+   "city": "Tucson",
+   "refs": [
+    "Tucson",
+    "TUS"
+   ]
+  },
+  {
+   "code": "BOI",
+   "city": "Boise",
+   "refs": [
+    "Boise",
+    "BOI"
+   ]
+  },
+  {
+   "code": "OMA",
+   "city": "Omaha",
+   "refs": [
+    "Omaha",
+    "OMA"
+   ]
+  },
+  {
+   "code": "SDF",
+   "city": "Louisville",
+   "refs": [
+    "Louisville",
+    "SDF"
+   ]
+  },
+  {
+   "code": "MEM",
+   "city": "Memphis",
+   "refs": [
+    "Memphis",
+    "MEM"
+   ]
+  },
+  {
+   "code": "JAX",
+   "city": "Jacksonville",
+   "refs": [
+    "Jacksonville",
+    "JAX"
+   ]
+  },
+  {
+   "code": "RSW",
+   "city": "Fort Myers",
+   "refs": [
+    "Fort Myers",
+    "RSW"
+   ]
+  },
+  {
+   "code": "CHS",
+   "city": "Charleston, South Carolina",
+   "refs": [
+    "Charleston, South Carolina",
+    "CHS"
+   ]
+  },
+  {
+   "code": "SAV",
+   "city": "Savannah",
+   "refs": [
+    "Savannah",
+    "SAV"
+   ]
+  },
+  {
+   "code": "BDL",
+   "city": "Hartford",
+   "refs": [
+    "Hartford",
+    "Bradley",
+    "BDL"
+   ]
+  },
+  {
+   "code": "PVD",
+   "city": "Providence",
+   "refs": [
+    "Providence",
+    "PVD"
+   ]
+  },
+  {
+   "code": "ELP",
+   "city": "El Paso",
+   "refs": [
+    "El Paso",
+    "ELP"
+   ]
+  },
+  {
+   "code": "RNO",
+   "city": "Reno",
+   "refs": [
+    "Reno",
+    "RNO"
+   ]
+  },
+  {
+   "code": "SJU",
+   "city": "San Juan",
+   "refs": [
+    "San Juan",
+    "SJU"
+   ]
+  },
+  {
+   "code": "LHR",
+   "city": "London Heathrow",
+   "refs": [
+    "Heathrow",
+    "London Heathrow",
+    "LHR"
+   ]
+  },
+  {
+   "code": "LGW",
+   "city": "London Gatwick",
+   "refs": [
+    "Gatwick",
+    "LGW"
+   ]
+  },
+  {
+   "code": "CDG",
+   "city": "Paris Charles de Gaulle",
+   "refs": [
+    "Charles de Gaulle",
+    "CDG"
+   ]
+  },
+  {
+   "code": "ORY",
+   "city": "Paris Orly",
+   "refs": [
+    "Orly",
+    "ORY"
+   ]
+  },
+  {
+   "code": "NRT",
+   "city": "Tokyo Narita",
+   "refs": [
+    "Narita",
+    "NRT"
+   ]
+  },
+  {
+   "code": "HND",
+   "city": "Tokyo Haneda",
+   "refs": [
+    "Haneda",
+    "HND"
+   ]
+  },
+  {
+   "code": "YYZ",
+   "city": "Toronto Pearson",
+   "refs": [
+    "Toronto Pearson",
+    "Pearson",
+    "YYZ"
+   ]
+  },
+  {
+   "code": "YVR",
+   "city": "Vancouver",
+   "refs": [
+    "Vancouver",
+    "YVR"
+   ]
+  },
+  {
+   "code": "YUL",
+   "city": "Montreal",
+   "refs": [
+    "Montreal",
+    "YUL"
+   ]
+  },
+  {
+   "code": "MEX",
+   "city": "Mexico City",
+   "refs": [
+    "Mexico City",
+    "MEX"
+   ]
+  },
+  {
+   "code": "CUN",
+   "city": "Cancun",
+   "refs": [
+    "Cancun",
+    "CUN"
+   ]
+  },
+  {
+   "code": "SJD",
+   "city": "Los Cabos",
+   "refs": [
+    "Los Cabos",
+    "Cabo",
+    "SJD"
+   ]
+  },
+  {
+   "code": "GDL",
+   "city": "Guadalajara",
+   "refs": [
+    "Guadalajara",
+    "GDL"
+   ]
+  },
+  {
+   "code": "MAD",
+   "city": "Madrid",
+   "refs": [
+    "Madrid",
+    "MAD"
+   ]
+  },
+  {
+   "code": "BCN",
+   "city": "Barcelona",
+   "refs": [
+    "Barcelona",
+    "BCN"
+   ]
+  },
+  {
+   "code": "LIS",
+   "city": "Lisbon",
+   "refs": [
+    "Lisbon",
+    "LIS"
+   ]
+  },
+  {
+   "code": "FCO",
+   "city": "Rome Fiumicino",
+   "refs": [
+    "Rome Fiumicino",
+    "Fiumicino",
+    "FCO"
+   ]
+  },
+  {
+   "code": "AMS",
+   "city": "Amsterdam",
+   "refs": [
+    "Amsterdam",
+    "Schiphol",
+    "AMS"
+   ]
+  },
+  {
+   "code": "FRA",
+   "city": "Frankfurt",
+   "refs": [
+    "Frankfurt",
+    "FRA"
+   ]
+  },
+  {
+   "code": "MUC",
+   "city": "Munich",
+   "refs": [
+    "Munich",
+    "MUC"
+   ]
+  },
+  {
+   "code": "ZRH",
+   "city": "Zurich",
+   "refs": [
+    "Zurich",
+    "ZRH"
+   ]
+  },
+  {
+   "code": "VIE",
+   "city": "Vienna",
+   "refs": [
+    "Vienna",
+    "VIE"
+   ]
+  },
+  {
+   "code": "DUB",
+   "city": "Dublin",
+   "refs": [
+    "Dublin",
+    "DUB"
+   ]
+  },
+  {
+   "code": "KEF",
+   "city": "Reykjavik",
+   "refs": [
+    "Reykjavik",
+    "Keflavik",
+    "KEF"
+   ]
+  },
+  {
+   "code": "CPH",
+   "city": "Copenhagen",
+   "refs": [
+    "Copenhagen",
+    "CPH"
+   ]
+  },
+  {
+   "code": "OSL",
+   "city": "Oslo",
+   "refs": [
+    "Oslo",
+    "OSL"
+   ]
+  },
+  {
+   "code": "ATH",
+   "city": "Athens",
+   "refs": [
+    "Athens",
+    "ATH"
+   ]
+  },
+  {
+   "code": "DXB",
+   "city": "Dubai",
+   "refs": [
+    "Dubai",
+    "DXB"
+   ]
+  },
+  {
+   "code": "DOH",
+   "city": "Doha",
+   "refs": [
+    "Doha",
+    "DOH"
+   ]
+  },
+  {
+   "code": "ADD",
+   "city": "Addis Ababa",
+   "refs": [
+    "Addis Ababa",
+    "Bole",
+    "ADD"
+   ]
+  },
+  {
+   "code": "NBO",
+   "city": "Nairobi",
+   "refs": [
+    "Nairobi",
+    "NBO"
+   ]
+  },
+  {
+   "code": "JNB",
+   "city": "Johannesburg",
+   "refs": [
+    "Johannesburg",
+    "JNB"
+   ]
+  },
+  {
+   "code": "CPT",
+   "city": "Cape Town",
+   "refs": [
+    "Cape Town",
+    "CPT"
+   ]
+  },
+  {
+   "code": "CAI",
+   "city": "Cairo",
+   "refs": [
+    "Cairo",
+    "CAI"
+   ]
+  },
+  {
+   "code": "LOS",
+   "city": "Lagos",
+   "refs": [
+    "Lagos",
+    "LOS"
+   ]
+  },
+  {
+   "code": "ACC",
+   "city": "Accra",
+   "refs": [
+    "Accra",
+    "ACC"
+   ]
+  },
+  {
+   "code": "DEL",
+   "city": "Delhi",
+   "refs": [
+    "Delhi",
+    "New Delhi",
+    "DEL"
+   ]
+  },
+  {
+   "code": "BOM",
+   "city": "Mumbai",
+   "refs": [
+    "Mumbai",
+    "BOM"
+   ]
+  },
+  {
+   "code": "SIN",
+   "city": "Singapore",
+   "refs": [
+    "Singapore",
+    "Changi",
+    "SIN"
+   ]
+  },
+  {
+   "code": "HKG",
+   "city": "Hong Kong",
+   "refs": [
+    "Hong Kong",
+    "HKG"
+   ]
+  },
+  {
+   "code": "ICN",
+   "city": "Seoul Incheon",
+   "refs": [
+    "Incheon",
+    "ICN"
+   ]
+  },
+  {
+   "code": "SYD",
+   "city": "Sydney",
+   "refs": [
+    "Sydney",
+    "SYD"
+   ]
+  },
+  {
+   "code": "AKL",
+   "city": "Auckland",
+   "refs": [
+    "Auckland",
+    "AKL"
+   ]
+  },
+  {
+   "code": "BOG",
+   "city": "Bogota",
+   "refs": [
+    "Bogota",
+    "BOG"
+   ]
+  },
+  {
+   "code": "LIM",
+   "city": "Lima",
+   "refs": [
+    "Lima",
+    "LIM"
+   ]
+  }
+ ],
+ "metros": [
+  {
+   "code": "WAS",
+   "refs": [
+    "Washington DC",
+    "DC",
+    "the DC area",
+    "Washington"
+   ],
+   "airports": [
+    "IAD",
+    "DCA",
+    "BWI"
+   ]
+  },
+  {
+   "code": "NYC",
+   "refs": [
+    "New York",
+    "New York City",
+    "NYC",
+    "the New York area"
+   ],
+   "airports": [
+    "JFK",
+    "LGA",
+    "EWR"
+   ]
+  },
+  {
+   "code": "CHI",
+   "refs": [
+    "Chicago",
+    "the Chicago area"
+   ],
+   "airports": [
+    "ORD",
+    "MDW"
+   ]
+  },
+  {
+   "code": "LON",
+   "refs": [
+    "London"
+   ],
+   "airports": [
+    "LHR",
+    "LGW"
+   ]
+  },
+  {
+   "code": "PAR",
+   "refs": [
+    "Paris"
+   ],
+   "airports": [
+    "CDG",
+    "ORY"
+   ]
+  },
+  {
+   "code": "TYO",
+   "refs": [
+    "Tokyo"
+   ],
+   "airports": [
+    "NRT",
+    "HND"
+   ]
+  }
+ ],
+ "ambiguous": [
+  {
+   "name": "Portland",
+   "options": [
+    "Portland, Oregon (PDX)",
+    "Portland, Maine (PWM)"
+   ]
+  },
+  {
+   "name": "Houston",
+   "options": [
+    "Houston Bush (IAH)",
+    "Houston Hobby (HOU)"
+   ]
+  },
+  {
+   "name": "Columbus",
+   "options": [
+    "Columbus, Ohio",
+    "Columbus, Georgia"
+   ]
+  },
+  {
+   "name": "Springfield",
+   "options": [
+    "Springfield, Missouri",
+    "Springfield, Illinois"
+   ]
+  },
+  {
+   "name": "Charleston",
+   "options": [
+    "Charleston, South Carolina",
+    "Charleston, West Virginia"
+   ]
+  }
+ ],
+ "held_out": [
+  "MSY",
+  "KEF",
+  "CUN",
+  "ADD",
+  "PIT",
+  "ANC",
+  "LIS",
+  "AMS",
+  "DUB",
+  "SAN"
+ ]
+}

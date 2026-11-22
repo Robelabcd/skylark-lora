@@ -1,0 +1,624 @@
+[
+  {
+    "id": "train-00020",
+    "category": "bookings",
+    "today": "2027-01-15",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Do I have any flights booked?"
+      }
+    ],
+    "expected": {
+      "name": "list_bookings",
+      "arguments": {}
+    }
+  },
+  {
+    "id": "train-00058",
+    "category": "bookings",
+    "today": "2027-05-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you show my reservations?"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "list_bookings",
+          "arguments": {}
+        }
+      },
+      {
+        "role": "tool",
+        "name": "list_bookings",
+        "content": {
+          "bookings": [
+            {
+              "booking_id": "BK-6253",
+              "trip": "one way",
+              "route": "MEX-ACC",
+              "depart": "2027-06-18",
+              "airline": "Air France"
+            },
+            {
+              "booking_id": "BK-6045",
+              "trip": "one way",
+              "route": "HOU-JAX",
+              "depart": "2027-07-10",
+              "airline": "Air Canada"
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "You have 2 bookings: a one-way Mexico City to Accra on Air France on June 18; a one-way Houston Hobby to Jacksonville on Air Canada on July 10."
+      },
+      {
+        "role": "user",
+        "content": "Please cancel the Air Canada booking"
+      }
+    ],
+    "expected": {
+      "name": "prepare_cancellation",
+      "arguments": {
+        "booking_id": "BK-6045"
+      }
+    }
+  },
+  {
+    "id": "train-00000",
+    "category": "city_airport",
+    "today": "2026-11-23",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I have to be in Reagan on December 12, leaving from Honolulu, economy. Any options?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "HNL",
+        "destination": "DCA",
+        "departure_date": "2026-12-12"
+      }
+    }
+  },
+  {
+    "id": "train-00002",
+    "category": "city_airport",
+    "today": "2027-06-23",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Going to Charleston, South Carolina on 6/29 from Orly. What flights are there?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ORY",
+        "destination": "CHS",
+        "departure_date": "2027-06-29"
+      }
+    }
+  },
+  {
+    "id": "train-00009",
+    "category": "clarify",
+    "today": "2027-01-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Get me out of MKE on Jan 31st"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Where would you like to fly to?"
+      }
+    },
+    "notes": "No destination."
+  },
+  {
+    "id": "train-00011",
+    "category": "clarify",
+    "today": "2027-01-11",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'd like to fly from Singapore to Charleston, South Carolina in early March"
+      }
+    ],
+    "expected": {
+      "name": "clarify",
+      "arguments": {
+        "question": "Which exact date would you like to fly?"
+      }
+    },
+    "notes": "A vague time is not a date."
+  },
+  {
+    "id": "train-00004",
+    "category": "decline",
+    "today": "2027-05-19",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you book me a hotel in Houston Hobby?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark only helps with flights, not hotels."
+      }
+    }
+  },
+  {
+    "id": "train-00015",
+    "category": "decline",
+    "today": "2027-03-31",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Will it rain in Athens tomorrow?"
+      }
+    ],
+    "expected": {
+      "name": "decline",
+      "arguments": {
+        "reason": "Skylark only helps with flights, not weather forecasts."
+      }
+    }
+  },
+  {
+    "id": "train-00018",
+    "category": "follow_up",
+    "today": "2027-02-02",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from YVR to JNB on the 7th of February, back February 19th"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "YVR",
+            "destination": "JNB",
+            "departure_date": "2027-02-07",
+            "return_date": "2027-02-19"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-6896",
+              "airline": "Turkish Airlines",
+              "depart": "2027-02-07T07:55",
+              "arrive": "2027-02-07T15:04",
+              "stops": 2,
+              "price_usd": 1388
+            },
+            {
+              "offer_id": "OF-7607",
+              "airline": "Ethiopian",
+              "depart": "2027-02-07T10:00",
+              "arrive": "2027-02-07T16:28",
+              "stops": 1,
+              "via": "DTW",
+              "price_usd": 944
+            },
+            {
+              "offer_id": "OF-7472",
+              "airline": "Air Canada",
+              "depart": "2027-02-07T16:45",
+              "arrive": "2027-02-07T22:03",
+              "stops": 0,
+              "price_usd": 824
+            },
+            {
+              "offer_id": "OF-8851",
+              "airline": "British Airways",
+              "depart": "2027-02-07T20:45",
+              "arrive": "2027-02-08T01:54",
+              "stops": 0,
+              "price_usd": 414
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 4 round trips: Turkish Airlines 2 stops at 7:55 AM for $1,388, Ethiopian 1 stop at 10:00 AM for $944, Air Canada nonstop at 4:45 PM for $824, and British Airways nonstop at 8:45 PM for $414."
+      },
+      {
+        "role": "user",
+        "content": "Can I see the fare rules for the earliest one?"
+      }
+    ],
+    "expected": {
+      "name": "get_offer_details",
+      "arguments": {
+        "offer_id": "OF-6896"
+      }
+    }
+  },
+  {
+    "id": "train-00031",
+    "category": "follow_up",
+    "today": "2027-04-12",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from ABQ to Fort Lauderdale on Jul 11th"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "ABQ",
+            "destination": "FLL",
+            "departure_date": "2027-07-11"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-9415",
+              "airline": "Turkish Airlines",
+              "depart": "2027-07-11T08:30",
+              "arrive": "2027-07-11T10:26",
+              "stops": 0,
+              "price_usd": 804
+            },
+            {
+              "offer_id": "OF-9443",
+              "airline": "Lufthansa",
+              "depart": "2027-07-11T10:10",
+              "arrive": "2027-07-11T12:53",
+              "stops": 0,
+              "price_usd": 680
+            },
+            {
+              "offer_id": "OF-6571",
+              "airline": "Emirates",
+              "depart": "2027-07-11T19:10",
+              "arrive": "2027-07-11T22:44",
+              "stops": 1,
+              "via": "DEN",
+              "price_usd": 138
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "I found 3 flights: Turkish Airlines nonstop at 8:30 AM for $804, Lufthansa nonstop at 10:10 AM for $680, and Emirates 1 stop at 7:10 PM for $138."
+      },
+      {
+        "role": "user",
+        "content": "Watch the lowest-priced option and tell me if it hits $110"
+      }
+    ],
+    "expected": {
+      "name": "create_price_watch",
+      "arguments": {
+        "offer_id": "OF-6571",
+        "target_price": 110
+      }
+    }
+  },
+  {
+    "id": "train-00003",
+    "category": "messy",
+    "today": "2027-03-04",
+    "messages": [
+      {
+        "role": "user",
+        "content": "doh > athns on mar 30, coach is fine"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DOH",
+        "destination": "ATH",
+        "departure_date": "2027-03-30"
+      }
+    }
+  },
+  {
+    "id": "train-00023",
+    "category": "messy",
+    "today": "2026-12-30",
+    "messages": [
+      {
+        "role": "user",
+        "content": "search ath > albquuerque on mar 29th please, there are four of us"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "ATH",
+        "destination": "ABQ",
+        "departure_date": "2027-03-29",
+        "adults": 4
+      }
+    }
+  },
+  {
+    "id": "train-00021",
+    "category": "relative_date",
+    "today": "2027-03-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Need a ticket MKE to Cairo the day after tomorrow"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "MKE",
+        "destination": "CAI",
+        "departure_date": "2027-03-22"
+      }
+    }
+  },
+  {
+    "id": "train-00039",
+    "category": "relative_date",
+    "today": "2027-06-08",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to fly out of Salt Lake City to DAL on the 5th"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "SLC",
+        "destination": "DAL",
+        "departure_date": "2027-07-05"
+      }
+    }
+  },
+  {
+    "id": "train-00001",
+    "category": "respond",
+    "today": "2027-04-27",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from Mexico City to SLC on 7/24, back Jul 31st"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "MEX",
+            "destination": "SLC",
+            "departure_date": "2027-07-24",
+            "return_date": "2027-07-31"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-9826",
+              "airline": "United",
+              "depart": "2027-07-24T10:45",
+              "arrive": "2027-07-24T13:19",
+              "stops": 0,
+              "price_usd": 426
+            },
+            {
+              "offer_id": "OF-5994",
+              "airline": "Aeromexico",
+              "depart": "2027-07-24T13:55",
+              "arrive": "2027-07-24T15:19",
+              "stops": 0,
+              "price_usd": 874
+            },
+            {
+              "offer_id": "OF-7393",
+              "airline": "Turkish Airlines",
+              "depart": "2027-07-24T20:30",
+              "arrive": "2027-07-24T22:22",
+              "stops": 0,
+              "price_usd": 770
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 round trips: United nonstop at 10:45 AM for $426, Aeromexico nonstop at 1:55 PM for $874, and Turkish Airlines nonstop at 8:30 PM for $770."
+      },
+      {
+        "role": "user",
+        "content": "Which ones are nonstop?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "United, Aeromexico and Turkish Airlines are nonstop."
+      }
+    }
+  },
+  {
+    "id": "train-00017",
+    "category": "respond",
+    "today": "2027-02-18",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Flights from MEM to Mumbai on the 25th of April"
+      },
+      {
+        "role": "assistant",
+        "tool_call": {
+          "name": "search_flights",
+          "arguments": {
+            "origin": "MEM",
+            "destination": "BOM",
+            "departure_date": "2027-04-25"
+          }
+        }
+      },
+      {
+        "role": "tool",
+        "name": "search_flights",
+        "content": {
+          "offers": [
+            {
+              "offer_id": "OF-7458",
+              "airline": "United",
+              "depart": "2027-04-25T09:55",
+              "arrive": "2027-04-25T16:39",
+              "stops": 1,
+              "via": "DFW",
+              "price_usd": 702
+            },
+            {
+              "offer_id": "OF-7414",
+              "airline": "Iberia",
+              "depart": "2027-04-25T20:15",
+              "arrive": "2027-04-26T01:45",
+              "stops": 1,
+              "via": "CLT",
+              "price_usd": 577
+            },
+            {
+              "offer_id": "OF-5967",
+              "airline": "Qatar Airways",
+              "depart": "2027-04-25T21:30",
+              "arrive": "2027-04-26T02:32",
+              "stops": 1,
+              "via": "FRA",
+              "price_usd": 530
+            }
+          ]
+        }
+      },
+      {
+        "role": "assistant",
+        "content": "Here are 3 flights: United 1 stop at 9:55 AM for $702, Iberia 1 stop at 8:15 PM for $577, and Qatar Airways 1 stop at 9:30 PM for $530."
+      },
+      {
+        "role": "user",
+        "content": "When does Iberia depart?"
+      }
+    ],
+    "expected": {
+      "name": "respond",
+      "arguments": {
+        "message": "The Iberia flight departs at 8:15 PM."
+      }
+    }
+  },
+  {
+    "id": "train-00006",
+    "category": "search_options",
+    "today": "2026-11-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Round trip: I'm flying Reno to SF on the 23rd of January, return on Thursday, in business. What's available?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "RNO",
+        "destination": "SFO",
+        "departure_date": "2027-01-23",
+        "return_date": "2027-01-28",
+        "cabin": "business"
+      }
+    }
+  },
+  {
+    "id": "train-00010",
+    "category": "search_options",
+    "today": "2027-04-03",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to fly out of Portland, Maine to LIM on June 29, 6 passengers, two stops max"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "PWM",
+        "destination": "LIM",
+        "departure_date": "2027-06-29",
+        "adults": 6,
+        "max_stops": 2
+      }
+    }
+  },
+  {
+    "id": "train-00005",
+    "category": "simple_search",
+    "today": "2027-01-18",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Looking to get from Denver to DFW on Feb 7th"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "DEN",
+        "destination": "DFW",
+        "departure_date": "2027-02-07"
+      }
+    }
+  },
+  {
+    "id": "train-00008",
+    "category": "simple_search",
+    "today": "2026-11-04",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Going to San Juan on Feb 25 from NRT. What flights are there?"
+      }
+    ],
+    "expected": {
+      "name": "search_flights",
+      "arguments": {
+        "origin": "NRT",
+        "destination": "SJU",
+        "departure_date": "2027-02-25"
+      }
+    }
+  }
+]

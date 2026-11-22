@@ -20,3 +20,7 @@
 | 2026-11-21 | Base model: Qwen/Qwen3-1.7B (Apache 2.0), non-thinking mode, greedy decoding | Text-only with standard attention, so a hand-written LoRA layer drops cleanly into q/k/v/o; deterministic answers |
 | 2026-11-21 | One shared prompt and JSON output format for every model; tool results shown as user messages | Same exam for all models; works with any chat API; the scorer needs no per-model code |
 | 2026-11-21 | Baselines: Qwen zero-shot, Qwen few-shot (4 examples not from the test set), one OpenAI model | Measures the starting point, whether better prompting is enough, and a commercial reference |
+| 2026-11-22 | Training data from code + templates (no teacher model yet); answers computed by code | Every answer is correct by construction; fast and reproducible; paraphrasing kept as a stretch and ablation |
+| 2026-11-22 | 4,000 train + 400 dev, 38% clarify/decline/respond, seed 6366, rebuilt not committed | Targets the baseline's weaknesses; one command reproduces the exact files |
+| 2026-11-22 | 10 airports held out of training (MSY, KEF, CUN, ADD, PIT, ANC, LIS, AMS, DUB, SAN) | Measures generalization to unseen airports on 9 test cases |
+| 2026-11-22 | Training examples use the test-set format and checker, and are rejected if any user message matches the test set | One set of rules for both; no exam text in training |

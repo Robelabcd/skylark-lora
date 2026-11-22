@@ -25,7 +25,7 @@ def load_generator(model_id: str, max_new_tokens: int = 256) -> Generate:
 
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForCausalLM.from_pretrained(
-        model_id, torch_dtype=torch.bfloat16, device_map="auto"
+        model_id, dtype=torch.bfloat16, device_map="auto"
     )
     model.eval()
 
