@@ -24,3 +24,6 @@
 | 2026-11-22 | 4,000 train + 400 dev, 38% clarify/decline/respond, seed 6366, rebuilt not committed | Targets the baseline's weaknesses; one command reproduces the exact files |
 | 2026-11-22 | 10 airports held out of training (MSY, KEF, CUN, ADD, PIT, ANC, LIS, AMS, DUB, SAN) | Measures generalization to unseen airports on 9 test cases |
 | 2026-11-22 | Training examples use the test-set format and checker, and are rejected if any user message matches the test set | One set of rules for both; no exam text in training |
+| 2026-11-22 | LoRA on attention q, k, v, o in all 28 blocks; r = 16, alpha = 32, dropout 0.05 | Classic setup, ~6.4M trainable parameters (~0.4%); feed-forward layers and ranks 4/8 become Step 9 ablations |
+| 2026-11-22 | Base model in bf16 on an L4/A100, adapters in fp32; no 4-bit QLoRA | 1.7B fits without quantization; keeps the hand-written layer simple and exactly comparable to PEFT |
+| 2026-11-22 | Hand-written LoRA verified against PEFT on a tiny random Qwen3 model | Proves correctness (same outputs, merged weights and parameter count) in seconds on a CPU |

@@ -28,6 +28,13 @@ gpu = [
 openai = [
   "openai>=1",          # commercial baseline (Step 4)
 ]
+train = [
+  "torch",              # LoRA layer and training
+  "transformers>=4.51", # loads Qwen3
+  "accelerate",         # places the model on the GPU
+  "peft",               # reference implementation the hand-written LoRA is tested against
+  "safetensors",        # saves the LoRA adapter
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
